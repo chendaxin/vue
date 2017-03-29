@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='js/vue.js'></script>
+</head>
+<body>
+    <div id="app-2">
+        <span v-bind:title = "message"> <!--这里该指令的作用是：“将这个元素节点的 title 属性和 Vue 实例的 message 属性保持一致”。-->
+            haha!
+        </span>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app-2',
+            data: {
+                message: '页面加载于 ' + new Date()
+            }
+        })
+    </script>
+</body>
+</html>
